@@ -19,6 +19,8 @@
         1. **`isLocked()`** : 락이 걸려있는지 아닌지 알려준다.
         2. **`getOwner()`** : 현재 락을 갖고 있는 스레드를 리턴한다.
         3. **`getQueuedThreads()`** : 락을 얻기 위해 대기하고 있는 스레드큐를 `Collection`으로 반환한다.
+     
+      ![ReentrantLock](https://github.com/16th-Operating-System-study/operating-system/blob/master/week4_concurrency/img/KangJinju/ReentrantLock.png?raw=true)
 
 
 ### ReentrantReadWriteLock
@@ -119,7 +121,7 @@ childMethod가 parentMethod를 호출할 때, 둘 다 동일한 락을 사용하
 
 
 ## 3. 내부 구조 (AQS_AbstractQueuedSynchronizer) & volatile 로 관리되는 매커니즘
-<img src="https://github.com/Pearl-K/operating-system/blob/master/week7_concurrent_package/img/KangJinju/reentrantlock_arch.png?raw=true" width="300"/>
+<img src="https://github.com/16th-Operating-System-study/operating-system/blob/master/week4_concurrency/img/KangJinju/reentrantlock_arch.png?raw=true" width="400"/>
 
 
 AQS는 **`synchronized`** 키워드를 직접 사용하지 않고, 내부적으로 **대기 큐**를 관리하여 스레드의 동기화를 처리한다. 
